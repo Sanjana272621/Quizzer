@@ -1,9 +1,12 @@
 import './index.css'
+import Quiz from './components/quiz.jsx'
 
 function App() {
   return (
-    <div className = "app-container">
-      Hello World!
+    <div className = "container">
+
+      <h1>Hello World!</h1>
+       <Quiz />
     </div>
   )
 }

@@ -6,11 +6,11 @@
   padding: 0;
 }
 
-body {
+body {          /* Without dot, so <body> tag */
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
+.container {   /* container class */
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
