@@ -17,9 +17,17 @@ function Quiz (){
         <div>
             <h2>Question 1</h2>
             <p className = "question"> {questionBank[0].question} </p>
-
-            <button className = "option">Berlin</button>
             
+            {/*Setting the 4 option buttons and mapping the corresponding options to buttons*/}
+            {questionBank[0].options.map((option) => (
+            <button className = "option"> {option} </button>
+            ))}
+
+            {/*Navigation Button*/}
+            <div className = "nav-buttons">
+                <button>Previous</button>
+                <button>Next</button>
+            </div>
         </div>
     );
 }
