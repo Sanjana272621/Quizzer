@@ -1,5 +1,6 @@
-import './index.css'
-import Quiz from './components/quiz.jsx'
+import './index.css';
+import Quiz from './components/quiz.jsx';
+import Results from './components/results.jsx';
 
 function App() {
   return (

@@ -8,6 +8,7 @@
 
 body {          /* Without dot, so <body> tag */
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .container {   /* container class */
