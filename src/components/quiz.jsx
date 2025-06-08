@@ -85,7 +85,9 @@ function Quiz (){
             {/*Navigation Button*/}
             <div className = "nav-buttons">
                 <button onClick = {goToPrev} disabled = {currentQuestion === 0}>Previous</button>
-                <button onClick = {goToNext} disabled = {selectedAnswer === null}>Next</button>
+                <button onClick = {goToNext} disabled = {selectedAnswer === null}>
+                    { (currentQuestion === questionBank.length -1 ? "Finish Quiz" : "Next")}
+                </button>
             </div>
         </div>
     );  
