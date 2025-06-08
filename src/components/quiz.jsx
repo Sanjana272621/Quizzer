@@ -38,27 +38,27 @@ function Quiz (){
 
     const initialAnswers = [null, null, null];
 
-    const [] = useState();
-
     //we have a state that keeps track of all the answers
     //Used to change the state for rendring new state in react 
-    const [optionSelected, setOptionSelected] = useState("None");   // Initialized to None
+
+    //userAnswers is a list 
+    const [userAnswers, setUserAnswers] = useState(initialAnswers); //State tracking for answers
+
+    const [currentQuestion, setCorrectQuestion] = useState(2); //State tracking for questions
 
     function handleSelectOption(option){
-        setOptionSelected(option);
+        setUserAnswers(option);
     }
 
     return (
         <div>
-            <h2>Question 1</h2>
-            <p className = "question"> {questionBank[0].question} </p>
+            <h2>Question {currentQuestion}</h2>
+            <p className = "question"> {questionBank[currentQuestion].question} </p>
             
             {/*Setting the 4 option buttons and mapping the corresponding options to buttons*/}
-            {questionBank[0].options.map((option) => (
+            {questionBank[currentQuestion].options.map((option) => (
             <button className = "option" onClick = {() => handleSelectOption(option)}> {option} </button>
             ))}
-
-            <p>Option selected: {optionSelected}</p>
 
             {/*Navigation Button*/}
             <div className = "nav-buttons">
