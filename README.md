@@ -32,12 +32,14 @@ All questions are hardcoded using JavaScript objects inside the component.
 
 ## File Structure
 
+```
 quiz-app/
 ├── App.jsx
 ├── Quiz.jsx
 ├── Results.jsx
 ├── index.js
 └── style.css
+```
 
 ## Getting Started
 
