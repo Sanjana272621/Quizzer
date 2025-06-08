@@ -42,12 +42,16 @@ function Quiz (){
     //Used to change the state for rendring new state in react 
 
     //userAnswers is a list 
+    //setUserAnswers is a react function (but can be named antything)
     const [userAnswers, setUserAnswers] = useState(initialAnswers); //State tracking for answers
 
     const [currentQuestion, setCorrectQuestion] = useState(2); //State tracking for questions
 
     function handleSelectOption(option){
-        setUserAnswers(option);
+        const newUserAnswers = [...userAnswers];
+        newUserAnswers[currentQuestion] = option;
+
+        setUserAnswers(newUserAnswers);
     }
 
     return (
