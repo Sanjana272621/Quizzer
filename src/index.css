@@ -119,17 +119,26 @@ footer {
 
 .option {
   display: block;         /* Stack buttons vertically */
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  margin: 10px 0;          /* Space between buttons */
-  padding: 10px 20px;
-  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid transparent;
+  border-radius: 6 px;
+  background: #e7ecf0;
   cursor: pointer;
-  font-size: 16px;
   text-align: left;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s, border 0.3s;
 }
 
+.option:hover{
+  background: #d6dde5;
+}
+
+.option.selected{
+  background: #90caf9;
+  border: 2px solid #42a5f5; 
+
+}
 .nav-buttons {
   margin-top: 20px;
   display: flex;

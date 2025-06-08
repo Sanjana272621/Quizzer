@@ -75,7 +75,11 @@ function Quiz (){
             
             {/*Setting the 4 option buttons and mapping the corresponding options to buttons*/}
             {questionBank[currentQuestion].options.map((option) => (
-            <button className = "option" onClick = {() => handleSelectOption(option)}> {option} </button>
+            <button 
+                className = {"option" + (selectedAnswer === option ? " selected" : "")}
+                onClick = {() => handleSelectOption(option)}> {option} 
+            </button>
+
             ))}
 
             {/*Navigation Button*/}
