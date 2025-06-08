@@ -77,7 +77,7 @@ function Quiz (){
     }
 
     if (isQuizFinished === true){
-        return <Results />;
+        return <Results userAnswers = {userAnswers} questionBank = {questionBank}/>; //passing props
     }
 
     return (
