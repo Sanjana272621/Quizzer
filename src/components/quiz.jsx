@@ -76,8 +76,14 @@ function Quiz (){
         }
     }
 
+    function restartQuiz(){
+        setUserAnswers(initialAnswers);
+        setCurrentQuestion(0);
+        setIsQuizFinished(false);
+    }
+
     if (isQuizFinished === true){
-        return <Results userAnswers = {userAnswers} questionBank = {questionBank}/>; //passing props
+        return <Results userAnswers = {userAnswers} questionBank = {questionBank} restartQuiz = {restartQuiz}/>; //passing props
     }
 
     return (

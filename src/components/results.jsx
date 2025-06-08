@@ -1,6 +1,6 @@
 import React from "react";
 
-function Results({questionBank, userAnswers}){
+function Results({questionBank, userAnswers, restartQuiz}){
 
     function getScore(){
         let finalScore = 0;
@@ -14,13 +14,12 @@ function Results({questionBank, userAnswers}){
         return finalScore;
     }
 
-
     const score = getScore();
     return (
         <div>  
             <h2>Quiz Completed!</h2>
             <p>Your Score: {score}/{questionBank.length}</p>
-            <button className = "btn">Restart Quiz</button>
+            <button className = "btn" onClick = {restartQuiz}>Restart Quiz</button>
         </div>
     );
 }
