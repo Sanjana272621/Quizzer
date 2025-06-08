@@ -38,7 +38,7 @@ quiz-app/
 ├── Quiz.jsx
 ├── Results.jsx
 ├── index.js
-└── style.css
+└── index.css
 ```
 
 ## Getting Started
