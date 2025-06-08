@@ -45,7 +45,10 @@ function Quiz (){
     //setUserAnswers is a react function (but can be named antything)
     const [userAnswers, setUserAnswers] = useState(initialAnswers); //State tracking for answers
 
-    const [currentQuestion, setCorrectQuestion] = useState(2); //State tracking for questions
+    const [currentQuestion, setCurrentQuestion] = useState(0); //State tracking for questions
+
+    //current selected answer
+    const selectedAnswer = userAnswers[currentQuestion];
 
     function handleSelectOption(option){
         const newUserAnswers = [...userAnswers];
@@ -54,9 +57,20 @@ function Quiz (){
         setUserAnswers(newUserAnswers);
     }
 
+    function goToNext(){
+        setCurrentQuestion(currentQuestion +1);
+    }
+
+    function goToPrev(){
+
+        if (currentQuestion >0){
+            setCurrentQuestion(currentQuestion -1);
+        }
+    }
+
     return (
         <div>
-            <h2>Question {currentQuestion}</h2>
+            <h2>Question {currentQuestion + 1}</h2>
             <p className = "question"> {questionBank[currentQuestion].question} </p>
             
             {/*Setting the 4 option buttons and mapping the corresponding options to buttons*/}
@@ -66,8 +80,8 @@ function Quiz (){
 
             {/*Navigation Button*/}
             <div className = "nav-buttons">
-                <button>Previous</button>
-                <button>Next</button>
+                <button onClick = {goToPrev} disabled = {currentQuestion === 0}>Previous</button>
+                <button onClick = {goToNext} disabled = {selectedAnswer === null}>Next</button>
             </div>
         </div>
     );  
