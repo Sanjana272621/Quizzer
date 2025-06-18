@@ -13,10 +13,10 @@ A simple and interactive quiz application built with React. It displays multiple
 
 ## Tech Stack
 
-- React (JSX + Hooks)
-- CSS for styling
-- No backend or database
-- No external libraries
+- **React.js** – Built using functional components and React Hooks (useState)
+- **CSS** – Custom styles with responsive design
+- **Frontend-only** – Self-contained application with no backend dependencies
+- **Question Data** – Stored as JavaScript objects within the component for easy prototyping and state handling
 
 All questions are hardcoded using JavaScript objects inside the component.
 
